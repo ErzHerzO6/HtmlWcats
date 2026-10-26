@@ -1,0 +1,325 @@
+/* =========================================================
+   SOLUTION — FINAL PROJECT: "THE PURRFECT CUP" CAT CAFÉ
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #fffdf9;
+  color: #2d2424;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ================= HEADER & NAVBAR ================= */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #f2e6da;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: #7f5539;
+  text-decoration: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #4a3b37;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #d95d39;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 13px 24px;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-small {
+  padding: 9px 18px;
+  background-color: #d95d39;
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background-color: #d95d39;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(217, 93, 57, 0.28);
+}
+
+.btn-outline {
+  border: 2px solid #d95d39;
+  color: #d95d39;
+  background-color: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover,
+.btn-small:hover {
+  background-color: #b84727;
+}
+
+.btn-outline:hover {
+  background-color: #fff0e8;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  background-color: #fff6ec;
+  padding: 64px 0;
+  border-bottom: 2px solid #f2e6da;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 420px;
+}
+
+.hero-text h1 {
+  font-size: 46px;
+  line-height: 1.15;
+  margin: 14px 0 16px 0;
+  color: #2d2424;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #5e504c;
+  margin: 0 0 28px 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pill-tag {
+  display: inline-block;
+  background-color: #ffe3cc;
+  color: #9c4221;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.hero-art {
+  flex: 1 1 420px;
+}
+
+.hero-art img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(127, 85, 57, 0.14);
+}
+
+/* ================= SHARED SECTIONS ================= */
+.section {
+  padding: 72px 0;
+}
+
+.section-tinted {
+  background-color: #faf3eb;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 44px auto;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin: 0 0 10px 0;
+}
+
+.section-heading p {
+  color: #6b5b55;
+  margin: 0;
+}
+
+/* ================= RESIDENT CATS GRID ================= */
+.cats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  width: 320px;
+  background-color: #ffffff;
+  border: 2px solid #f0e4d7;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 8px 22px rgba(45, 36, 36, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 34px rgba(45, 36, 36, 0.12);
+  border-color: #d95d39;
+}
+
+.cat-card img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.cat-badge {
+  display: inline-block;
+  background-color: #fff0e5;
+  color: #b84727;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.cat-card h3 {
+  margin: 12px 0 8px 0;
+  font-size: 22px;
+}
+
+.cat-card p {
+  margin: 0;
+  color: #5e504c;
+}
+
+/* ================= CAFÉ MENU BOARD ================= */
+.menu-board {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #eadbcf;
+  border-radius: 24px;
+  padding: 12px 32px;
+  box-shadow: 0 10px 28px rgba(45, 36, 36, 0.05);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px dashed #e2d2c3;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item h3 {
+  margin: 0 0 4px 0;
+  font-size: 19px;
+}
+
+.menu-item p {
+  margin: 0;
+  color: #6b5b55;
+  font-size: 15px;
+}
+
+.price {
+  background-color: #fff3e6;
+  color: #9c4221;
+  font-weight: 800;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* ================= VISIT US & FOOTER ================= */
+.visit-layout {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.visit-card {
+  flex: 1 1 320px;
+  background-color: #fff6ec;
+  border: 2px solid #f0dfd0;
+  border-radius: 22px;
+  padding: 28px;
+}
+
+.visit-card h2 {
+  margin-top: 0;
+}
+
+.rules-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.rules-list li {
+  margin-bottom: 10px;
+}
+
+.site-footer {
+  background-color: #2d2424;
+  color: #f5ebe1;
+  text-align: center;
+  padding: 28px 0;
+  font-size: 15px;
+}

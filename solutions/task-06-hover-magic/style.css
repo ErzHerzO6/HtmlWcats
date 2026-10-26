@@ -1,0 +1,91 @@
+/* =========================================================
+   SOLUTION — TASK 6: HOVER EFFECTS & SMOOTH TRANSITIONS
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #f8f5ff;
+  color: #231f2e;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #6b6280;
+  margin-bottom: 36px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* 1. Base card has the transition rule so both hover-in and hover-out are smooth */
+.cat-card {
+  width: 320px;
+  background-color: #ffffff;
+  border: 2px solid #e4dcfa;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(35, 31, 46, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* 2. Card floats upward by 8px on hover */
+.cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(35, 31, 46, 0.14);
+  border-color: #9b72cf;
+}
+
+.photo-frame {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* 3. Subtle zoom on the cat illustration when hovering anywhere on the card */
+.cat-photo {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cat-card:hover .cat-photo {
+  transform: scale(1.05);
+}
+
+/* 4. Interactive button states (:hover and :active) */
+.pet-btn {
+  width: 100%;
+  padding: 13px 18px;
+  margin-top: 8px;
+  background-color: #7b4ec2;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.pet-btn:hover {
+  background-color: #5a3494;
+  transform: translateY(-2px);
+}
+
+.pet-btn:active {
+  transform: scale(0.96);
+}

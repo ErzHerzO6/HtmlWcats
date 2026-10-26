@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380" role="img" aria-label="Cozy Cat Cafe window with sleeping cat and warm latte">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE8D6"/>
+      <stop offset="100%" stop-color="#FFD2B8"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9F2"/>
+      <stop offset="100%" stop-color="#F7E8D8"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer frame -->
+  <rect width="520" height="380" rx="28" fill="url(#wallGrad)" stroke="#E6CCB2" stroke-width="4"/>
+  <!-- Arched Cafe Window -->
+  <path d="M70 270 L70 140 A130 110 0 0 1 330 140 L330 270 Z" fill="url(#skyGrad)" stroke="#7F5539" stroke-width="8"/>
+  <line x1="200" y1="32" x2="200" y2="270" stroke="#7F5539" stroke-width="6"/>
+  <line x1="70" y1="165" x2="330" y2="165" stroke="#7F5539" stroke-width="6"/>
+  <!-- Sun in window -->
+  <circle cx="140" cy="108" r="26" fill="#FFB703" opacity="0.85"/>
+  <!-- Hanging Plant -->
+  <line x1="418" y1="0" x2="418" y2="86" stroke="#7F5539" stroke-width="3"/>
+  <path d="M394 86 L442 86 L434 122 L402 122 Z" fill="#E07A5F" stroke="#5C3D2E" stroke-width="3"/>
+  <path d="M402 86 C380 70, 376 104, 396 106" fill="#588157"/>
+  <path d="M434 86 C458 68, 460 104, 440 106" fill="#3A5A40"/>
+  <path d="M418 86 C406 54, 432 54, 418 86" fill="#6A994E"/>
+  <circle cx="392" cy="126" r="6" fill="#588157"/>
+  <circle cx="388" cy="144" r="5" fill="#6A994E"/>
+  <circle cx="444" cy="130" r="6" fill="#588157"/>
+  <!-- Wooden Counter / Sill -->
+  <rect x="36" y="270" width="448" height="24" rx="10" fill="#B08968" stroke="#5C3D2E" stroke-width="4"/>
+  <rect x="52" y="294" width="416" height="58" rx="8" fill="#DDB892"/>
+  <!-- Plush Cat Cushion -->
+  <ellipse cx="195" cy="264" rx="88" ry="22" fill="#E07A5F" stroke="#5C3D2E" stroke-width="3.5"/>
+  <!-- Sleeping Cat on Cushion -->
+  <ellipse cx="192" cy="242" rx="62" ry="32" fill="#FFFDF9" stroke="#3D312E" stroke-width="4"/>
+  <path d="M210 214 C236 218, 248 238, 238 258 C222 250, 212 232, 210 214 Z" fill="#F4A261"/>
+  <!-- Sleeping Cat Head -->
+  <circle cx="142" cy="236" r="28" fill="#FFFDF9" stroke="#3D312E" stroke-width="4"/>
+  <polygon points="120,218 116,194 138,210" fill="#F4A261" stroke="#3D312E" stroke-width="3.5" stroke-linejoin="round"/>
+  <polygon points="162,216 170,192 146,208" fill="#4A3B37" stroke="#3D312E" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Closed peaceful eyes -->
+  <path d="M126 238 Q132 244 138 238" fill="none" stroke="#3D312E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M146 238 Q152 244 158 238" fill="none" stroke="#3D312E" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="140,244 145,244 142.5,248" fill="#F28482"/>
+  <!-- Curled Tail -->
+  <path d="M250 248 C278 248, 280 272, 250 272 C232 272, 224 264, 230 258" fill="none" stroke="#F4A261" stroke-width="12" stroke-linecap="round"/>
+  <path d="M250 248 C278 248, 280 272, 250 272" fill="none" stroke="#3D312E" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Zzz -->
+  <text x="102" y="182" font-family="sans-serif" font-weight="bold" font-size="18" fill="#7F5539">z</text>
+  <text x="86" y="164" font-family="sans-serif" font-weight="bold" font-size="22" fill="#7F5539">Z</text>
+  <!-- Steaming Coffee Mug -->
+  <path d="M412 224 C434 224, 434 256, 412 256" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M412 224 C434 224, 434 256, 412 256" fill="none" stroke="#3D312E" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="352" y="212" width="62" height="58" rx="12" fill="#FFFFFF" stroke="#3D312E" stroke-width="3.5"/>
+  <!-- Cat face on mug -->
+  <circle cx="374" cy="240" r="2.5" fill="#3D312E"/>
+  <circle cx="392" cy="240" r="2.5" fill="#3D312E"/>
+  <path d="M379 246 Q383 250 387 246" fill="none" stroke="#3D312E" stroke-width="2" stroke-linecap="round"/>
+  <!-- Steam wisps -->
+  <path d="M368 198 Q362 184 370 172" fill="none" stroke="#B08968" stroke-width="3" stroke-linecap="round"/>
+  <path d="M384 194 Q392 178 382 164" fill="none" stroke="#B08968" stroke-width="3" stroke-linecap="round"/>
+  <path d="M400 198 Q394 184 402 172" fill="none" stroke="#B08968" stroke-width="3" stroke-linecap="round"/>
+</svg>

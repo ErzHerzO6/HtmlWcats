@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Purrfect Cup — Cat Café</title>
+
+  <!-- MILESTONE 1A: Connect your style.css file right here! -->
+
+</head>
+<body>
+
+  <!-- =========================================================
+       FINAL PROJECT: "THE PURRFECT CUP" CAT CAFÉ WEBSITE ☕🐱
+       Combine everything you learned today:
+       - Semantic HTML5 (<header>, <nav>, <main>, <section>, <article>, <footer>)
+       - CSS Colors, Typography & Smooth Scrolling
+       - The Box Model (padding, borders, rounded corners, shadows)
+       - Flexbox Layouts (navbar, 2-column hero, 3-card cat grid, menu rows)
+       - Smooth :hover animations!
+       ========================================================= -->
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">☕ The Purrfect Cup</a>
+
+      <!-- MILESTONE 1B: Add a <nav class="main-nav"> with 3 links:
+           1. href="#cats"  -> Meet the Cats
+           2. href="#menu"  -> Café Menu
+           3. href="#visit" -> Visit Us
+           Plus one button-styled link: <a href="#visit" class="btn btn-small">Book a Cuddle</a>
+      -->
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-text">
+          <span class="pill-tag">✨ Cozy Coffee &bull; Rescue Cats</span>
+
+          <!-- MILESTONE 2A: Add a big <h1> headline, a short <p> description,
+               and a <div class="hero-actions"> with two links:
+               - <a href="#cats" class="btn btn-primary">Meet Our Cats</a>
+               - <a href="#menu" class="btn btn-outline">See the Menu</a>
+          -->
+
+        </div>
+
+        <div class="hero-art">
+          <img src="../../assets/cafe-hero.svg" alt="Cozy Cat Café window with sleeping cat and warm mug">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESIDENT CATS SECTION ================= -->
+    <section id="cats" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Meet Our Resident Baristas</h2>
+          <p>They terrible at making espresso, so we let them nap on the cushions instead.</p>
+        </div>
+
+        <div class="cats-grid">
+          <!-- Cat Card 1 (Provided as an example!) -->
+          <article class="cat-card">
+            <img src="../../assets/mochi.svg" alt="Mochi the calico cat">
+            <span class="cat-badge">Chief Nap Officer</span>
+            <h3>Mochi</h3>
+            <p>Will happily curl up next to your laptop if you share the warmth of your charger.</p>
+          </article>
+
+          <!-- Cat Card 2 (Provided as an example!) -->
+          <article class="cat-card">
+            <img src="../../assets/whiskers.svg" alt="Sir Whiskers the tuxedo cat">
+            <span class="cat-badge">Quality Inspector</span>
+            <h3>Sir Whiskers</h3>
+            <p>Sniffs every oat milk latte from a polite distance and approves with a slow blink.</p>
+          </article>
+
+          <!-- MILESTONE 3A: Create Cat Card 3 (<article class="cat-card">) right here!
+               Pick either "../../assets/luna.svg" (Luna) OR "../../assets/barnaby.svg" (Barnaby),
+               give them a <span class="cat-badge">, an <h3> name, and a funny <p> bio! -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAFÉ MENU SECTION ================= -->
+    <section id="menu" class="section section-tinted">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Drinks &amp; Bakery Menu</h2>
+          <p>Freshly brewed specialty coffee and pastries (strictly guarded from sneaky paws).</p>
+        </div>
+
+        <div class="menu-board">
+          <div class="menu-item">
+            <div>
+              <h3>Caramel Catpuccino</h3>
+              <p>Double espresso, velvety steamed milk, house caramel &amp; cinnamon paw-print art.</p>
+            </div>
+            <span class="price">$5.20</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <h3>Matcha Meow Latte</h3>
+              <p>Ceremonial Uji matcha whisked to perfection over oat or whole milk (hot or iced).</p>
+            </div>
+            <span class="price">$5.80</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <h3>Warm Cardamom Bun</h3>
+              <p>Flaky Swedish-style pastry braided with freshly ground cardamom and pearl sugar.</p>
+            </div>
+            <span class="price">$4.50</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <h3>Salmon Treat Cup (For the Cats!)</h3>
+              <p>Order a tiny cup of freeze-dried salmon snacks and instantly become the most popular human in the room.</p>
+            </div>
+            <span class="price">$2.50</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOUSE RULES & VISIT SECTION ================= -->
+    <section id="visit" class="section">
+      <div class="container visit-layout">
+        <div class="visit-card">
+          <h2>🐾 Café House Rules</h2>
+          <ul class="rules-list">
+            <li>Let sleeping cats sleep — never wake a napping kitty!</li>
+            <li>No flash photography (their eyes are sensitive!).</li>
+            <li>Please don't feed human pastries to the cats, no matter how sad Barnaby looks.</li>
+          </ul>
+        </div>
+
+        <div class="visit-card">
+          <h2>📍 Visit The Purrfect Cup</h2>
+          <p><strong>Address:</strong> 42 Sunbeam Alley, Cozy Quarter</p>
+          <p><strong>Hours:</strong> Tue – Sun: 10:00 AM – 7:00 PM (Closed Mondays for extra cat naps)</p>
+          <p><strong>Entry:</strong> $8 / hour (includes one free drip coffee or tea!)</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with 💖, HTML &amp; CSS during Lecture 1 &bull; &copy; 2026 The Purrfect Cup Cat Café</p>
+    </div>
+  </footer>
+
+  <!-- Floating Task Checklist -->
+  <script src="../../task-guide.js" data-task="7"></script>
+</body>
+</html>

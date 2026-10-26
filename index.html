@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 1: Frontend with HTML &amp; CSS (Cat Edition!)</title>
+  <link rel="stylesheet" href="lecture-styles.css">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- ================= LEFT SIDEBAR NAVIGATION ================= -->
+    <aside class="sidebar">
+      <div>
+        <div class="brand-box">
+          <div class="brand-icon">🐾</div>
+          <div>
+            <p class="brand-title">Frontend 101</p>
+            <p class="brand-sub">HTML &amp; CSS Crash Course</p>
+          </div>
+        </div>
+
+        <ul class="chapter-list">
+          <li><button class="chapter-btn active"><span class="chapter-num">0</span> Welcome &amp; Big Picture</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">1</span> HTML Skeleton &amp; Tags</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">2</span> Semantic HTML5</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">3</span> Hello CSS! Colors &amp; Fonts</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">4</span> The CSS Box Model</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">5</span> Flexbox Layouts</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">6</span> Hover Magic &amp; Motion</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">7</span> Final Project: Cat Café</button></li>
+          <li><button class="chapter-btn"><span class="chapter-num">8</span> Cheat Sheet &amp; Bug Fixer</button></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        Tip: Use <span class="kbd">←</span> and <span class="kbd">→</span> arrow keys to flip between modules!
+      </div>
+    </aside>
+
+    <!-- ================= MAIN LECTURE CONTENT ================= -->
+    <div class="main-area">
+
+      <header class="topbar">
+        <div class="progress-wrap">
+          <span class="progress-label" id="progressLabel">Module 0 of 8</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="pill-btn" id="togglePresentBtn">🖥️ Presentation Mode</button>
+        </div>
+      </header>
+
+      <main class="content-inner">
+
+        <!-- =========================================================
+             MODULE 0: WELCOME & HOW WEBSITES WORK
+             ========================================================= -->
+        <section class="chapter-panel active">
+          <span class="module-eyebrow">Module 0 &bull; Welcome!</span>
+          <h1>How Websites Actually Work 🐱✨</h1>
+          <p class="lead">
+            Secret confession from software engineers: websites aren't magic. Every website you've ever
+            visited is just a plain text file that your browser dresses up!
+          </p>
+
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h3>🪵 HTML = The Cat Tree Frame</h3>
+              <p>
+                <strong>HyperText Markup Language</strong> puts the raw pieces onto the page:
+                headings, paragraphs, images of cats, buttons, and links. Without CSS, it looks like a plain 1995 Word document.
+              </p>
+            </div>
+
+            <div class="concept-card">
+              <h3>🎨 CSS = Plush Cushions &amp; Paint</h3>
+              <p>
+                <strong>Cascading Style Sheets</strong> makes everything pretty and organized:
+                warm colors, fonts, rounded corners, side-by-side columns, and smooth hover animations.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout callout-tip">
+            <strong class="callout-title">🪄 2-Minute Icebreaker: Hack Any Website!</strong>
+            Right-click anywhere on this page (or open Wikipedia), click <strong>Inspect</strong>,
+            double-click any text inside an <code class="inline">&lt;h1&gt;</code> tag, and change it to
+            <em>"Breaking News: Cats Now Run the Government"</em>. Notice two things:
+            <ol style="margin: 8px 0 0 0;">
+              <li>Real websites use the exact same tags you are about to learn today!</li>
+              <li>Refreshing the page resets it, because you only edited your browser's temporary copy.</li>
+            </ol>
+          </div>
+
+          <h2>🎯 What You Will Build Today</h2>
+          <p>
+            Through <strong>6 bite-sized warm-up tasks</strong> and <strong>1 cozy final project</strong>,
+            you will go from zero coding experience to building <em>The Purrfect Cup</em> — a complete, multi-section Cat Café website:
+          </p>
+          <p>
+            <a class="btn-link btn-link-secondary" href="solutions/task-07-final-cat-cafe/index.html" target="_blank">
+              👀 Sneak Peek: Open Final Cat Café Website ↗
+            </a>
+          </p>
+        </section>
+
+        <!-- =========================================================
+             MODULE 1: HTML SKELETON & FIRST TAGS
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 1 &bull; HTML Basics</span>
+          <h1>HTML Tags: Making Sandwiches with Text</h1>
+          <p class="lead">
+            In HTML, we wrap pieces of content inside <strong>tags</strong> using angle brackets <code class="inline">&lt; &gt;</code> so the browser knows what each piece is.
+          </p>
+
+          <!-- Interactive Widget 1 -->
+          <div class="playground">
+            <span class="playground-badge">Interactive Explorer</span>
+            <h3 style="margin-top:0;">Click Each Piece of This HTML Link:</h3>
+
+            <div class="tag-anatomy-tokens">
+              <span class="token-part token-open selected" data-part="open">&lt;a</span>
+              <span class="token-part token-attr" data-part="attr">href="https://cats.com"</span>
+              <span class="token-part token-open" data-part="open">&gt;</span>
+              <span class="token-part token-content" data-part="content">Pet Mochi!</span>
+              <span class="token-part token-close" data-part="close">&lt;/a&gt;</span>
+            </div>
+
+            <div class="token-explain" id="tokenExplain">
+              <strong>1. Opening Tag <code>&lt;a ...&gt;</code></strong>: Tells the browser "Start a clickable link right here!" Think of it as the top slice of bread in a sandwich.
+            </div>
+          </div>
+
+          <h2>📋 Your Starter Pack of HTML Tags</h2>
+          <table class="ref-table">
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>What It Creates</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="inline">&lt;h1&gt;</code> to <code class="inline">&lt;h6&gt;</code></td>
+                <td>Headings (<code class="inline">h1</code> is biggest, <code class="inline">h6</code> is smallest)</td>
+                <td><code class="inline">&lt;h1&gt;Meet Mochi&lt;/h1&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code class="inline">&lt;p&gt;</code></td>
+                <td>A normal paragraph of text</td>
+                <td><code class="inline">&lt;p&gt;She loves naps.&lt;/p&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code class="inline">&lt;strong&gt;</code> / <code class="inline">&lt;em&gt;</code></td>
+                <td><strong>Bold</strong> importance / <em>Italic</em> emphasis</td>
+                <td><code class="inline">&lt;strong&gt;Very&lt;/strong&gt; fluffy</code></td>
+              </tr>
+              <tr>
+                <td><code class="inline">&lt;ul&gt;</code> &amp; <code class="inline">&lt;li&gt;</code></td>
+                <td>Unordered bullet list + list items inside it</td>
+                <td><code class="inline">&lt;ul&gt;&lt;li&gt;Tuna&lt;/li&gt;&lt;/ul&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code class="inline">&lt;a href="..."&gt;</code></td>
+                <td>Clickable link (<code class="inline">target="_blank"</code> = new tab)</td>
+                <td><code class="inline">&lt;a href="#menu"&gt;Menu&lt;/a&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code class="inline">&lt;img src="..." alt="..."&gt;</code></td>
+                <td>Image! <strong>Special rule:</strong> No closing tag needed!</td>
+                <td><code class="inline">&lt;img src="mochi.svg" alt="Cat"&gt;</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>🏠 Every HTML File Has Two Rooms: <code class="inline">&lt;head&gt;</code> &amp; <code class="inline">&lt;body&gt;</code></h2>
+          <div class="code-card">
+            <div class="code-header">
+              <span>index.html</span>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;!-- 🧠 BRAIN (Invisible settings, tab title &amp; CSS link) --&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Browser Tab Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- 👀 VISIBLE PAGE (Everything your visitor actually sees!) --&gt;
+  &lt;h1&gt;Hello from Mochi!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </div>
+
+          <!-- TASK 1 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 1</span>
+              <span class="folder-pill">📁 tasks/task-01-html-skeleton/index.html</span>
+            </div>
+            <h3>Build Mochi's First Webpage!</h3>
+            <p>
+              Practice right here in the live editor below — OR open <code class="inline">tasks/task-01-html-skeleton/index.html</code> in VS Code!
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>Change <code class="inline">&lt;title&gt;Change Me!&lt;/title&gt;</code> inside <code class="inline">&lt;head&gt;</code> to <code class="inline">Meet Mochi the Cat!</code></li>
+                <li>Replace the placeholder line with a main heading: <code class="inline">&lt;h1&gt;Meet Mochi!&lt;/h1&gt;</code></li>
+                <li>Add Mochi's photo: <code class="inline">&lt;img src="assets/mochi.svg" alt="Mochi the calico cat" width="220"&gt;</code></li>
+                <li>Wrap the bio sentence in <code class="inline">&lt;p&gt;...&lt;/p&gt;</code> and make one word <code class="inline">&lt;strong&gt;</code> (bold) and one word <code class="inline">&lt;em&gt;</code> (italic).</li>
+                <li>Add a subheading: <code class="inline">&lt;h2&gt;Mochi's Favorite Snacks&lt;/h2&gt;</code></li>
+                <li>Create a bullet list <code class="inline">&lt;ul&gt;</code> with 3 <code class="inline">&lt;li&gt;</code> items (<em>Crispy salmon treats</em>, <em>Steamed chicken</em>, <em>Anything on your plate</em>).</li>
+                <li>Add a link: <code class="inline">&lt;a href="https://en.wikipedia.org/wiki/Calico_cat" target="_blank"&gt;Learn more about Calico Cats&lt;/a&gt;</code></li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="1"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-01-html-skeleton/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-01-html-skeleton/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>💡 Need a Hint?</summary>
+              <p style="margin-bottom:0;">
+                Remember that <code class="inline">&lt;li&gt;</code> items must live <em>inside</em> <code class="inline">&lt;ul&gt; ... &lt;/ul&gt;</code>, and <code class="inline">&lt;img&gt;</code> stands on its own without <code class="inline">&lt;/img&gt;</code>!
+              </p>
+            </details>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution Code</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-01-html-skeleton/index.html</span><button class="copy-btn">Copy</button></div>
+                <pre>&lt;h1&gt;Meet Mochi!&lt;/h1&gt;
+&lt;img src="../../assets/mochi.svg" alt="Mochi the calico cat" width="260"&gt;
+
+&lt;p&gt;
+  Mochi is a &lt;strong&gt;professional napper&lt;/strong&gt; who believes every box belongs to &lt;em&gt;her&lt;/em&gt;.
+&lt;/p&gt;
+
+&lt;h2&gt;Mochi's Favorite Snacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Crispy salmon treats&lt;/li&gt;
+  &lt;li&gt;Steamed chicken&lt;/li&gt;
+  &lt;li&gt;Anything currently on your plate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href="https://en.wikipedia.org/wiki/Calico_cat" target="_blank"&gt;
+  Learn more about Calico Cats
+&lt;/a&gt;</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 2: SEMANTIC HTML5
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 2 &bull; Clean Structure</span>
+          <h1>Semantic HTML5: Labeling Your Moving Boxes 📦</h1>
+          <p class="lead">
+            Imagine moving into a new apartment where all 40 cardboard boxes just say <strong>"BOX"</strong> (<code class="inline">&lt;div&gt;</code>). You'd go crazy! Semantic HTML gives your page sections meaningful labels.
+          </p>
+
+          <div class="wireframe-compare">
+            <div class="wf-box">
+              <h3 style="margin-top:0; color:#9c3819;">❌ "Div Soup" (Hard to read)</h3>
+              <div class="wf-tag">&lt;div&gt; Top Bar &amp; Links &lt;/div&gt;</div>
+              <div class="wf-tag">
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt; About Shelter &lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt; Cat Card &lt;/div&gt;<br>
+                &lt;/div&gt;
+              </div>
+              <div class="wf-tag">&lt;div&gt; Copyright &amp; Address &lt;/div&gt;</div>
+            </div>
+
+            <div class="wf-box wf-good">
+              <h3 style="margin-top:0; color:#165b52;">✅ Semantic HTML5 (Crystal clear!)</h3>
+              <div class="wf-tag">&lt;header&gt; + &lt;nav&gt; Links &lt;/header&gt;</div>
+              <div class="wf-tag">
+                &lt;main&gt;<br>
+                &nbsp;&nbsp;&lt;section&gt; About Shelter &lt;/section&gt;<br>
+                &nbsp;&nbsp;&lt;article&gt; Cat Card &lt;/article&gt;<br>
+                &lt;/main&gt;
+              </div>
+              <div class="wf-tag">&lt;footer&gt; Copyright &amp; Address &lt;/footer&gt;</div>
+            </div>
+          </div>
+
+          <div class="callout callout-purple">
+            <strong class="callout-title">🔗 Bonus Superpower: Page Jump Links!</strong>
+            If you give any section an ID like <code class="inline">&lt;section id="residents"&gt;</code>, you can make a link jump straight to it on click using <code class="inline">&lt;a href="#residents"&gt;Our Cats&lt;/a&gt;</code>!
+          </div>
+
+          <!-- TASK 2 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 2</span>
+              <span class="folder-pill">📁 tasks/task-02-semantic-html/index.html</span>
+            </div>
+            <h3>Clean Up the Sunny Paws Cat Shelter!</h3>
+            <p>
+              Someone built the shelter's webpage using nothing but generic <code class="inline">&lt;div&gt;</code> tags! Refactor the "div soup" into meaningful HTML5 tags (note: semantic tags organize your code structure, so the visual look won't change yet — CSS comes next!).
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>Change the top banner <code class="inline">&lt;div&gt;</code> into <code class="inline">&lt;header&gt; ... &lt;/header&gt;</code>.</li>
+                <li>Change the link bar <code class="inline">&lt;div&gt;</code> inside the header into <code class="inline">&lt;nav&gt; ... &lt;/nav&gt;</code>.</li>
+                <li>Change the big middle wrapper <code class="inline">&lt;div&gt;</code> into <code class="inline">&lt;main&gt; ... &lt;/main&gt;</code>.</li>
+                <li>Change <code class="inline">&lt;div id="about"&gt;</code> and <code class="inline">&lt;div id="residents"&gt;</code> into <code class="inline">&lt;section&gt;</code> tags (keep their <code class="inline">id</code> attributes!).</li>
+                <li>Change both Barnaby's and Luna's <code class="inline">&lt;div&gt;</code> blocks into <code class="inline">&lt;article&gt; ... &lt;/article&gt;</code>.</li>
+                <li>Change the bottom <code class="inline">&lt;div id="contact"&gt;</code> into <code class="inline">&lt;footer id="contact"&gt; ... &lt;/footer&gt;</code>.</li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="2"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-02-semantic-html/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-02-semantic-html/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution Code</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-02-semantic-html/index.html</span><button class="copy-btn">Copy</button></div>
+                <pre>&lt;header&gt;
+  &lt;h1&gt;Sunny Paws Cat Shelter&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#about"&gt;About Us&lt;/a&gt; |
+    &lt;a href="#residents"&gt;Our Cats&lt;/a&gt; |
+    &lt;a href="#contact"&gt;Visit Us&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section id="about"&gt;
+    &lt;h2&gt;About Our Shelter&lt;/h2&gt;
+    &lt;p&gt;We rescue sleepy kitties and match them with loving forever homes.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id="residents"&gt;
+    &lt;h2&gt;Cats Looking for a Home&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Barnaby (Age: 3)&lt;/h3&gt;
+      &lt;img src="../../assets/barnaby.svg" alt="Barnaby" width="220"&gt;
+      &lt;p&gt;Loves chasing teal yarn balls and loudly announcing dinner time.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Luna (Age: 2)&lt;/h3&gt;
+      &lt;img src="../../assets/luna.svg" alt="Luna" width="220"&gt;
+      &lt;p&gt;Quiet shadow ninja who purrs like a tiny motorboat when you read a book.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer id="contact"&gt;
+  &lt;p&gt;12 Whisker Lane, Catville &amp;bull; &amp;copy; 2026 Sunny Paws Cat Shelter&lt;/p&gt;
+&lt;/footer&gt;</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 3: HELLO CSS! SELECTORS, COLORS & FONTS
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 3 &bull; Styling Begins</span>
+          <h1>Hello CSS! Colors, Fonts &amp; Selectors 🎨</h1>
+          <p class="lead">
+            Now let's make things look good! We write CSS in a separate file (<code class="inline">style.css</code>) and connect it inside our HTML <code class="inline">&lt;head&gt;</code> with one magic line:
+          </p>
+
+          <div class="code-card">
+            <div class="code-header"><span>Inside &lt;head&gt; in index.html</span><button class="copy-btn">Copy</button></div>
+            <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+          </div>
+
+          <h2>🎯 How CSS Picks Which Elements to Paint</h2>
+          <p>Every CSS rule has a <strong>Selector</strong> (who to style) followed by curly braces <code class="inline">{ }</code> containing <code class="inline">property: value;</code> pairs:</p>
+
+          <!-- Interactive Widget 3: Selector Playground -->
+          <div class="playground">
+            <span class="playground-badge">Interactive Selector Tester</span>
+            <h3 style="margin-top:0;">Click a CSS Selector to See Which Cats Get Styled:</h3>
+
+            <div class="selector-buttons">
+              <button class="sel-btn" data-sel="article">article { ... }</button>
+              <button class="sel-btn active" data-sel=".sleepy">.sleepy { ... }</button>
+              <button class="sel-btn" data-sel=".dapper">.dapper { ... }</button>
+              <button class="sel-btn" data-sel="#luna-vip">#luna-vip { ... }</button>
+            </div>
+
+            <div class="selector-cats-stage">
+              <div class="sel-cat-item" data-classes="sleepy" data-id="mochi">
+                <img src="assets/mochi.svg" alt="Mochi">
+                <strong>Mochi</strong>
+                <span class="mini-code-tag">&lt;article class="sleepy"&gt;</span>
+              </div>
+
+              <div class="sel-cat-item" data-classes="dapper" data-id="whiskers">
+                <img src="assets/whiskers.svg" alt="Sir Whiskers">
+                <strong>Sir Whiskers</strong>
+                <span class="mini-code-tag">&lt;article class="dapper"&gt;</span>
+              </div>
+
+              <div class="sel-cat-item" data-classes="sleepy" data-id="luna-vip">
+                <img src="assets/luna.svg" alt="Luna">
+                <strong>Luna</strong>
+                <span class="mini-code-tag">&lt;article class="sleepy" id="luna-vip"&gt;</span>
+              </div>
+            </div>
+
+            <div class="token-explain" id="selectorExplain" style="margin-top:16px;"></div>
+          </div>
+
+          <div class="callout callout-tip">
+            <strong class="callout-title">💡 Rule of Thumb: Use <code>.classes</code> 90% of the Time!</strong>
+            <ul>
+              <li><strong>No symbol</strong> (<code class="inline">p</code>, <code class="inline">h1</code>, <code class="inline">body</code>) = styles <em>every</em> tag of that type.</li>
+              <li><strong>Dot <code class="inline">.</code></strong> (<code class="inline">.card</code>, <code class="inline">.highlight</code>) = styles any element with <code class="inline">class="card"</code>. Reusable and flexible!</li>
+              <li><strong>Hashtag <code class="inline">#</code></strong> (<code class="inline">#banner</code>) = styles one single unique <code class="inline">id="banner"</code>.</li>
+            </ul>
+          </div>
+
+          <!-- TASK 3 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 3</span>
+              <span class="folder-pill">📁 tasks/task-03-css-colors-fonts/</span>
+            </div>
+            <h3>Style "The Daily Meow" Newspaper!</h3>
+            <p>
+              First link <code class="inline">style.css</code> in the <code class="inline">index.html</code> tab, then switch to the <code class="inline">style.css</code> tab to style tags, classes, and IDs!
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>In <code class="inline">index.html</code> (inside <code class="inline">&lt;head&gt;</code>), add <code class="inline">&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+                <li>Switch to <code class="inline">style.css</code> and style <code class="inline">body</code>: <code class="inline">background-color: #fff9f2; color: #2d2424; font-family: sans-serif; line-height: 1.6;</code></li>
+                <li>Style <code class="inline">h1</code>: <code class="inline">color: #d95d39; font-size: 34px; text-align: center;</code></li>
+                <li>Style class <code class="inline">.subtitle</code>: <code class="inline">text-align: center; color: #7a6a63;</code></li>
+                <li>Style class <code class="inline">.highlight</code>: <code class="inline">background-color: #ffe3cc; color: #b54222; font-weight: bold;</code></li>
+                <li>Style class <code class="inline">.cat-quote</code>: <code class="inline">font-style: italic; color: #5e3a8c;</code></li>
+                <li>Style ID <code class="inline">#special-announcement</code>: <code class="inline">background-color: #231f2e; color: #ffd166; text-align: center; font-weight: bold; padding: 10px;</code></li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="3"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-03-css-colors-fonts/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-03-css-colors-fonts/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution CSS</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-03-css-colors-fonts/style.css</span><button class="copy-btn">Copy</button></div>
+                <pre>body {
+  background-color: #fff9f2;
+  color: #2d2424;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #d95d39;
+  font-size: 40px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #7a6a63;
+  font-size: 18px;
+}
+
+.highlight {
+  background-color: #ffe3cc;
+  color: #b54222;
+  font-weight: bold;
+}
+
+.cat-quote {
+  font-style: italic;
+  color: #5e3a8c;
+  font-size: 19px;
+}
+
+#special-announcement {
+  background-color: #231f2e;
+  color: #ffd166;
+  text-align: center;
+  font-weight: bold;
+}</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 4: THE CSS BOX MODEL
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 4 &bull; Core Superpower</span>
+          <h1>The Box Model: A Cat in a Cardboard Box 📦🐱</h1>
+          <p class="lead">
+            Here is the biggest secret in CSS: <strong>every single element on a webpage is a rectangular box</strong>. Once you understand the 4 layers of a cat's cardboard box, spacing will never confuse you again!
+          </p>
+
+          <!-- Interactive Widget 4: Cat in a Cardboard Box -->
+          <div class="playground">
+            <span class="playground-badge">Live Box Model Visualizer</span>
+            <h3 style="margin-top:0;">Drag the Sliders to Adjust Mochi's Cardboard Box:</h3>
+
+            <div class="box-model-layout">
+              <div>
+                <div class="slider-row">
+                  <label><span>Padding (Blanket INSIDE walls)</span> <span id="bmPaddingVal">20px</span></label>
+                  <input type="range" id="bmPadding" min="0" max="48" value="20">
+                </div>
+
+                <div class="slider-row">
+                  <label><span>Border (Cardboard wall thickness)</span> <span id="bmBorderVal">4px</span></label>
+                  <input type="range" id="bmBorder" min="0" max="16" value="4">
+                </div>
+
+                <div class="slider-row">
+                  <label><span>Border-Radius (Rounded corners)</span> <span id="bmRadiusVal">16px</span></label>
+                  <input type="range" id="bmRadius" min="0" max="44" value="16">
+                </div>
+
+                <div class="slider-row">
+                  <label><span>Margin (Personal space OUTSIDE)</span> <span id="bmMarginVal">16px</span></label>
+                  <input type="range" id="bmMargin" min="0" max="44" value="16">
+                </div>
+
+                <div class="code-card" style="margin-bottom:0;">
+                  <div class="code-header"><span>Live CSS</span><button class="copy-btn">Copy</button></div>
+                  <pre id="bmCodeOutput"></pre>
+                </div>
+              </div>
+
+              <div>
+                <div class="bm-stage">
+                  <span class="bm-margin-label">↕ Margin Zone (Pushes neighbors away)</span>
+                  <div class="bm-cardboard-box" id="bmCardboardBox">
+                    <div class="bm-content-cat">
+                      <img src="assets/mochi.svg" alt="Mochi inside a box">
+                      <strong>Content (Mochi!)</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bm-legend">
+                  <span><i class="legend-dot" style="background:#ffffff; border:1px solid #ccc;"></i>Content</span>
+                  <span><i class="legend-dot" style="background:#d4edda;"></i>Padding (Inside)</span>
+                  <span><i class="legend-dot" style="background:#8d5b4c;"></i>Border (Walls)</span>
+                  <span><i class="legend-dot" style="background:#ffebd2;"></i>Margin (Outside)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout">
+            <strong class="callout-title">🔥 Two Pro Tricks You Will Use Every Day:</strong>
+            <ol style="margin:6px 0 0 0;">
+              <li><strong>Center a box horizontally:</strong> Give it a <code class="inline">width</code> (like <code class="inline">350px</code>) and set <code class="inline">margin: 40px auto;</code> — <code class="inline">auto</code> splits the left and right margin equally!</li>
+              <li><strong>Pill-shaped badges:</strong> Set <code class="inline">border-radius: 999px;</code> on any tag or button for smooth capsule corners!</li>
+            </ol>
+          </div>
+
+          <!-- TASK 4 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 4</span>
+              <span class="folder-pill">📁 tasks/task-04-box-model-card/style.css</span>
+            </div>
+            <h3>Design Sir Whiskers' VIP Adoption Card!</h3>
+            <p>
+              Turn an unstyled block into a modern UI card using <code class="inline">padding</code>, <code class="inline">border</code>, <code class="inline">border-radius</code>, and <code class="inline">margin</code>!
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>Style <code class="inline">.cat-card</code>: <code class="inline">width: 300px; background-color: #ffffff; padding: 20px; border: 2px solid #d6e4f5; border-radius: 22px; margin: 16px auto; box-shadow: 0 12px 24px rgba(40,42,54,0.1);</code></li>
+                <li>Style <code class="inline">.cat-photo</code>: <code class="inline">width: 100%; display: block; border-radius: 14px; margin-bottom: 12px;</code></li>
+                <li>Turn <code class="inline">.badge</code> into a pill shape: <code class="inline">display: inline-block; background-color: #e3f6e8; color: #216e39; padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: bold;</code></li>
+                <li>Style <code class="inline">.adopt-btn</code>: <code class="inline">width: 100%; padding: 12px; background-color: #e63946; color: #ffffff; border: none; border-radius: 10px; font-weight: bold;</code></li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="4"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-04-box-model-card/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-04-box-model-card/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution CSS</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-04-box-model-card/style.css</span><button class="copy-btn">Copy</button></div>
+                <pre>.cat-card {
+  width: 350px;
+  background-color: #ffffff;
+  padding: 24px;
+  border: 2px solid #d6e4f5;
+  border-radius: 24px;
+  margin: 48px auto;
+  box-shadow: 0 14px 30px rgba(40, 42, 54, 0.1);
+}
+
+.cat-photo {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e3f6e8;
+  color: #216e39;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.adopt-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #e63946;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 5: FLEXBOX LAYOUTS
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 5 &bull; Modern Page Layouts</span>
+          <h1>Flexbox: Cats on a Sunny Windowsill ☀️🐾</h1>
+          <p class="lead">
+            By default, HTML stacks block elements vertically from top to bottom. How do modern websites put a logo on the left, links on the right, and 3 cards side-by-side? Meet <strong>Flexbox</strong>!
+          </p>
+
+          <div class="callout callout-tip">
+            <strong class="callout-title">👑 The Golden Rule of Flexbox:</strong>
+            You always put <code class="inline">display: flex;</code> on the <strong>PARENT container</strong> (the windowsill), and all of its direct children (the cats!) immediately line up side-by-side!
+          </div>
+
+          <!-- Interactive Widget 5: Flexbox Windowsill -->
+          <div class="playground">
+            <span class="playground-badge">Interactive Flexbox Playground</span>
+            <h3 style="margin-top:0;">Move the Cats Around the Windowsill:</h3>
+
+            <div class="flex-controls">
+              <div class="control-group">
+                <label for="flexJustify">justify-content (Left/Right)</label>
+                <select id="flexJustify">
+                  <option value="flex-start">flex-start (Left)</option>
+                  <option value="center" selected>center (Middle)</option>
+                  <option value="flex-end">flex-end (Right)</option>
+                  <option value="space-between">space-between (Spread Edges!)</option>
+                  <option value="space-around">space-around</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="flexAlign">align-items (Up/Down)</label>
+                <select id="flexAlign">
+                  <option value="center" selected>center (Middle)</option>
+                  <option value="flex-start">flex-start (Top)</option>
+                  <option value="flex-end">flex-end (Bottom)</option>
+                  <option value="stretch">stretch (Equal Height)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="flexDir">flex-direction</label>
+                <select id="flexDir">
+                  <option value="row" selected>row (Horizontal)</option>
+                  <option value="row-reverse">row-reverse</option>
+                  <option value="column">column (Vertical Stack)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="flexGap">gap (Space Between Cats)</label>
+                <select id="flexGap">
+                  <option value="0px">0px (Squished!)</option>
+                  <option value="16px" selected>16px (Cozy)</option>
+                  <option value="36px">36px (Roomy)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="windowsill-stage" id="windowsillStage">
+              <div class="sill-cat">
+                <img src="assets/mochi.svg" alt="Mochi">
+                <span>1. Mochi</span>
+              </div>
+              <div class="sill-cat tall">
+                <img src="assets/whiskers.svg" alt="Sir Whiskers">
+                <span>2. Whiskers (Tall)</span>
+              </div>
+              <div class="sill-cat">
+                <img src="assets/barnaby.svg" alt="Barnaby">
+                <span>3. Barnaby</span>
+              </div>
+            </div>
+
+            <div class="code-card" style="margin-bottom:0; margin-top:16px;">
+              <div class="code-header"><span>Generated Flexbox CSS</span><button class="copy-btn">Copy</button></div>
+              <pre id="flexCodeOutput"></pre>
+            </div>
+          </div>
+
+          <p>
+            <strong>Bonus Mobile-Friendly Property:</strong> Adding <code class="inline">flex-wrap: wrap;</code> tells the browser: <em>"If the screen gets too narrow for 3 cards side-by-side, gently wrap the extra card onto the next row instead of squishing it!"</em>
+          </p>
+
+          <!-- TASK 5 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 5</span>
+              <span class="folder-pill">📁 tasks/task-05-flexbox-layout/style.css</span>
+            </div>
+            <h3>Arrange the WhiskerSquad Navbar &amp; Cat Gallery!</h3>
+            <p>
+              Everything is stacked vertically right now! Add <code class="inline">display: flex;</code> to the 4 parent containers in <code class="inline">style.css</code> to snap the layout into place.
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>On <code class="inline">.navbar</code>, add <code class="inline">display: flex; justify-content: space-between; align-items: center;</code></li>
+                <li>On <code class="inline">.nav-links</code>, add <code class="inline">display: flex; gap: 16px; list-style: none; margin: 0; padding: 0;</code></li>
+                <li>On <code class="inline">.card-grid</code>, add <code class="inline">display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;</code></li>
+                <li>On <code class="inline">.cat-stats</code>, add <code class="inline">display: flex; justify-content: space-between;</code></li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="5"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-05-flexbox-layout/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-05-flexbox-layout/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution CSS</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-05-flexbox-layout/style.css</span><button class="copy-btn">Copy</button></div>
+                <pre>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cat-stats {
+  display: flex;
+  justify-content: space-between;
+}</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 6: HOVER EFFECTS & SMOOTH TRANSITIONS
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 6 &bull; Polish &amp; Delight</span>
+          <h1>Hover Magic &amp; Smooth Transitions ✨</h1>
+          <p class="lead">
+            What separates a beginner page from a polished, tactile frontend? Subtle feedback when you move your mouse (<code class="inline">:hover</code>) or click (<code class="inline">:active</code>)!
+          </p>
+
+          <!-- Interactive Widget 6: Hover Comparison -->
+          <div class="playground">
+            <span class="playground-badge">Feel the Difference</span>
+            <h3 style="margin-top:0;">Hover Your Mouse Over Both Cards Below:</h3>
+
+            <div class="hover-compare">
+              <div class="demo-hover-card demo-no-transition">
+                <img src="assets/barnaby.svg" alt="Barnaby">
+                <h3>❌ Without <code>transition</code></h3>
+                <p style="font-size:14px; color:#6b5b55; margin-bottom:0;">
+                  Teleports abruptly! Feels jumpy and robotic.
+                </p>
+              </div>
+
+              <div class="demo-hover-card demo-with-transition">
+                <img src="assets/luna.svg" alt="Luna">
+                <h3>✅ With <code>transition: 0.28s ease</code></h3>
+                <p style="font-size:14px; color:#6b5b55; margin-bottom:0;">
+                  Glides smoothly up and floats gently back down!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="code-card">
+            <div class="code-header"><span>The Hover Lift Recipe</span><button class="copy-btn">Copy</button></div>
+            <pre>.cat-card {
+  /* Put transition on the BASE class (not :hover) so mouse-out is smooth too! */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-8px); /* Negative Y moves UPWARD by 8 pixels! */
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
+}</pre>
+          </div>
+
+          <!-- TASK 6 BOX -->
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🛠️ Hands-On Task 6</span>
+              <span class="folder-pill">📁 tasks/task-06-hover-magic/style.css</span>
+            </div>
+            <h3>Build the Interactive Cat Petting Cards!</h3>
+            <p>
+              Make Luna's card float smoothly upward when hovered, zoom her photo slightly, and make the button feel tactile when clicked!
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your Step-by-Step Assignment:</h4>
+              <ol class="task-steps-list">
+                <li>Add <code class="inline">transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;</code> to <code class="inline">.cat-card</code>.</li>
+                <li>Create <code class="inline">.cat-card:hover</code> with <code class="inline">transform: translateY(-8px); border-color: #9b72cf; box-shadow: 0 18px 32px rgba(35,31,46,0.16);</code></li>
+                <li>Add <code class="inline">transition: transform 0.3s ease;</code> to <code class="inline">.cat-photo</code>, and create <code class="inline">.cat-card:hover .cat-photo { transform: scale(1.06); }</code></li>
+                <li>Add a transition to <code class="inline">.pet-btn</code>, darken on <code class="inline">.pet-btn:hover</code>, and add <code class="inline">.pet-btn:active { transform: scale(0.95); }</code>!</li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="6"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-06-hover-magic/index.html" target="_blank">Open Standalone Starter File ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-06-hover-magic/index.html" target="_blank">Preview Full Target Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Full Solution CSS</summary>
+              <div class="code-card">
+                <div class="code-header"><span>solutions/task-06-hover-magic/style.css</span><button class="copy-btn">Copy</button></div>
+                <pre>.cat-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(35, 31, 46, 0.14);
+  border-color: #9b72cf;
+}
+
+.cat-photo {
+  transition: transform 0.3s ease;
+}
+
+.cat-card:hover .cat-photo {
+  transform: scale(1.05);
+}
+
+.pet-btn {
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.pet-btn:hover {
+  background-color: #5a3494;
+  transform: translateY(-2px);
+}
+
+.pet-btn:active {
+  transform: scale(0.96);
+}</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 7: FINAL CAPSTONE PROJECT — THE PURRFECT CUP
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 7 &bull; Capstone Project</span>
+          <h1>Final Project: "The Purrfect Cup" Cat Café ☕🐱</h1>
+          <p class="lead">
+            Time to combine <strong>every single skill</strong> from today into a complete, cozy landing page that looks like a real startup or café website!
+          </p>
+
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h3>Milestone 1: Sticky Navbar</h3>
+              <p>Connect <code class="inline">style.css</code>, add the <code class="inline">&lt;nav&gt;</code> links in HTML, and align the header using Flexbox <code class="inline">space-between</code>.</p>
+            </div>
+            <div class="concept-card">
+              <h3>Milestone 2: 2-Column Hero</h3>
+              <p>Write the big welcome <code class="inline">&lt;h1&gt;</code> &amp; buttons, then place the text and cozy café window art side-by-side!</p>
+            </div>
+            <div class="concept-card">
+              <h3>Milestone 3: Resident Cats Grid</h3>
+              <p>Add a new cat card (Barnaby or Luna!) in HTML, then style the cards with the Box Model, Flexbox, and <code class="inline">:hover</code> lift!</p>
+            </div>
+            <div class="concept-card">
+              <h3>Milestone 4 &amp; 5: Menu &amp; Visit</h3>
+              <p>Use Flexbox <code class="inline">space-between</code> to align coffee prices neatly on the right, and style the House Rules boxes!</p>
+            </div>
+          </div>
+
+          <div class="task-box">
+            <div class="task-header">
+              <span class="task-badge">🏆 Capstone Build</span>
+              <span class="folder-pill">📁 tasks/task-07-final-cat-cafe/</span>
+            </div>
+            <h3>Build &amp; Customize Your Own Cat Café!</h3>
+            <p>
+              Try a mini version in the live sandbox right below, or open <code class="inline">tasks/task-07-final-cat-cafe/</code> in VS Code to build the full multi-section website!
+            </p>
+
+            <div class="task-steps-card">
+              <h4>📋 Your 5 Capstone Milestones:</h4>
+              <ol class="task-steps-list">
+                <li><strong>Navbar:</strong> Add <code class="inline">&lt;link rel="stylesheet" href="style.css"&gt;</code> + <code class="inline">&lt;nav class="main-nav"&gt;</code> links in HTML, and use Flexbox <code class="inline">space-between</code> on the header in CSS.</li>
+                <li><strong>Hero Section:</strong> Add a welcoming <code class="inline">&lt;h1&gt;</code> and <code class="inline">&lt;p&gt;</code> in HTML, and align <code class="inline">.hero</code> side-by-side with <code class="inline">display: flex; align-items: center; gap: 18px;</code>.</li>
+                <li><strong>Resident Cats:</strong> Add a new <code class="inline">&lt;article class="cat-card"&gt;</code> for Barnaby (<code class="inline">assets/barnaby.svg</code>), use Flexbox on <code class="inline">.cats-grid</code>, and add a <code class="inline">:hover</code> lift on <code class="inline">.cat-card</code>!</li>
+                <li><strong>Café Menu:</strong> Align drink names on the left and prices on the right using <code class="inline">.menu-item { display: flex; justify-content: space-between; }</code>.</li>
+                <li><strong>Make It Yours!</strong> Rename the café, customize the colors, or invent a hilarious menu item!</li>
+              </ol>
+            </div>
+
+            <div class="live-sandbox" data-sandbox-id="7"></div>
+
+            <div class="task-links">
+              <a class="btn-link btn-link-primary" href="tasks/task-07-final-cat-cafe/index.html" target="_blank">Open Full Starter Café ↗</a>
+              <a class="btn-link btn-link-secondary" href="solutions/task-07-final-cat-cafe/index.html" target="_blank">Preview Complete Café Solution ↗</a>
+            </div>
+
+            <details class="spoiler">
+              <summary>✅ Milestone 3A Hint (HTML for Barnaby's Card)</summary>
+              <div class="code-card">
+                <div class="code-header"><span>HTML for Barnaby's Card</span><button class="copy-btn">Copy</button></div>
+                <pre>&lt;article class="cat-card"&gt;
+  &lt;img src="../../assets/barnaby.svg" alt="Barnaby the orange tabby cat"&gt;
+  &lt;span class="cat-badge"&gt;Head of Chaos&lt;/span&gt;
+  &lt;h3&gt;Barnaby&lt;/h3&gt;
+  &lt;p&gt;Chases teal yarn balls under tables and believes every croissant is for him.&lt;/p&gt;
+&lt;/article&gt;</pre>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- =========================================================
+             MODULE 8: QUICK CHEAT SHEET & TROUBLESHOOTING
+             ========================================================= -->
+        <section class="chapter-panel">
+          <span class="module-eyebrow">Module 8 &bull; Reference</span>
+          <h1>5-Second Bug Fixer &amp; Cheat Sheet 🩺</h1>
+          <p class="lead">
+            Even 10-year senior developers hit CSS bugs every single day. Whenever something doesn't change on screen, run down this 5-step checklist!
+          </p>
+
+          <div class="callout">
+            <strong class="callout-title">🚨 "Why Isn't My CSS Working?!" Checklist</strong>
+            <ol style="margin:8px 0 0 0;">
+              <li><strong>Did you save BOTH files?</strong> Check for a little dot next to <code class="inline">index.html</code> and <code class="inline">style.css</code> and press <span class="kbd">Ctrl</span> + <span class="kbd">S</span>!</li>
+              <li><strong>Did you refresh the browser?</strong> Press <span class="kbd">F5</span> or <span class="kbd">Ctrl</span> + <span class="kbd">R</span>.</li>
+              <li><strong>Is <code class="inline">&lt;link rel="stylesheet" href="style.css"&gt;</code> inside <code class="inline">&lt;head&gt;</code>?</strong> Double-check the filename spelling!</li>
+              <li><strong>Did you forget the dot <code class="inline">.</code> on a class?</strong> <code class="inline">class="cat-card"</code> needs <code class="inline">.cat-card { ... }</code>, NOT <code class="inline">cat-card { ... }</code>!</li>
+              <li><strong>Check the line ABOVE for a missing semicolon <code class="inline">;</code> or <code class="inline">}</code>!</strong> One missing semicolon disables the property right below it.</li>
+            </ol>
+          </div>
+
+          <h2>⚡ Essential Properties at a Glance</h2>
+          <table class="ref-table">
+            <thead>
+              <tr>
+                <th>What You Want to Do</th>
+                <th>Exact CSS to Write</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Center text inside an element</td>
+                <td><code class="inline">text-align: center;</code></td>
+              </tr>
+              <tr>
+                <td>Center a box with a width on the page</td>
+                <td><code class="inline">width: 350px; margin: 0 auto;</code></td>
+              </tr>
+              <tr>
+                <td>Put items side-by-side in a row</td>
+                <td><code class="inline">display: flex; gap: 24px;</code> <em>(on parent!)</em></td>
+              </tr>
+              <tr>
+                <td>Push logo left &amp; nav links right</td>
+                <td><code class="inline">display: flex; justify-content: space-between; align-items: center;</code></td>
+              </tr>
+              <tr>
+                <td>Add breathing room <em>inside</em> a card</td>
+                <td><code class="inline">padding: 24px;</code></td>
+              </tr>
+              <tr>
+                <td>Make smooth rounded corners (or pill shape)</td>
+                <td><code class="inline">border-radius: 20px;</code> (or <code class="inline">999px</code> for pills!)</td>
+              </tr>
+              <tr>
+                <td>Remove underline from links</td>
+                <td><code class="inline">text-decoration: none;</code></td>
+              </tr>
+              <tr>
+                <td>Remove bullet points from a <code class="inline">&lt;ul&gt;</code></td>
+                <td><code class="inline">list-style: none; padding: 0;</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-tip">
+            <strong class="callout-title">🎉 Congratulations on Finishing Lecture 1!</strong>
+            You also have a printable/markdown copy of this reference saved right in your folder at <code class="inline">CHEAT_SHEET.md</code>!
+          </div>
+        </section>
+
+        <!-- ================= BOTTOM NEXT / PREV NAVIGATION ================= -->
+        <div class="chapter-pager">
+          <button class="pager-btn" id="prevChapterBtn">← Previous</button>
+          <button class="pager-btn next" id="nextChapterBtn">Next Module →</button>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="lecture-script.js"></script>
+</body>
+</html>

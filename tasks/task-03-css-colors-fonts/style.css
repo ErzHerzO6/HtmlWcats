@@ -1,0 +1,53 @@
+/* =========================================================
+   TASK 3: HELLO CSS! COLORS, FONTS & SELECTORS
+   Remember the CSS pattern:
+   selector {
+     property: value;
+   }
+   Don't forget the semicolon (;) at the end of every line!
+   ========================================================= */
+
+/* TODO 2: Style the <body> element (Tag Selector: body)
+   - Set background-color to #fff9f2  (a cozy warm cream)
+   - Set color (text color) to #2d2424 (dark espresso brown — softer than pure black!)
+   - Set font-family to 'Segoe UI', system-ui, sans-serif
+   - Set line-height to 1.6           (gives lines of text room to breathe)
+*/
+
+
+/* TODO 3: Style the main heading (Tag Selector: h1)
+   - Set color to #d95d39
+   - Set font-size to 40px
+   - Set text-align to center
+*/
+
+
+/* TODO 4: Style the subtitle paragraph (Class Selector: .subtitle)
+   Notice the dot (.) in front of class names!
+   - Set text-align to center
+   - Set color to #7a6a63
+   - Set font-size to 18px
+*/
+
+
+/* TODO 5: Style the highlighted words (Class Selector: .highlight)
+   - Set background-color to #ffe3cc
+   - Set color to #b54222
+   - Set font-weight to bold
+*/
+
+
+/* TODO 6: Style Luna's quote (Class Selector: .cat-quote)
+   - Set font-style to italic
+   - Set color to #5e3a8c
+   - Set font-size to 19px
+*/
+
+
+/* TODO 7: Style the breaking news banner (ID Selector: #special-announcement)
+   Notice the hashtag (#) in front of ID names!
+   - Set background-color to #231f2e
+   - Set color to #ffd166
+   - Set text-align to center
+   - Set font-weight to bold
+*/

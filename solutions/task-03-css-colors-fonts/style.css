@@ -1,0 +1,57 @@
+/* =========================================================
+   SOLUTION — TASK 3: COLORS, FONTS & SELECTORS
+   ========================================================= */
+
+/* 2. Tag Selector: styles the entire page body */
+body {
+  background-color: #fff9f2;
+  color: #2d2424;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  /* A little bonus max-width keeps lines easy to read on huge monitors! */
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* 3. Tag Selector: main heading */
+h1 {
+  color: #d95d39;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* 4. Class Selector (.): targets class="subtitle" */
+.subtitle {
+  text-align: center;
+  color: #7a6a63;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* 5. Class Selector (.): reusable highlight style */
+.highlight {
+  background-color: #ffe3cc;
+  color: #b54222;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* 6. Class Selector (.): targets class="cat-quote" */
+.cat-quote {
+  font-style: italic;
+  color: #5e3a8c;
+  font-size: 19px;
+}
+
+/* 7. ID Selector (#): targets the one unique id="special-announcement" */
+#special-announcement {
+  background-color: #231f2e;
+  color: #ffd166;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+}

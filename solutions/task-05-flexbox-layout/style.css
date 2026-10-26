@@ -1,0 +1,107 @@
+/* =========================================================
+   SOLUTION — TASK 5: FLEXBOX LAYOUT
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #fffaf5;
+  color: #2d2424;
+}
+
+/* 1. Navbar flex container: logo on left, links on right */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-bottom: 2px solid #f0e4d7;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #d95d39;
+}
+
+/* 2. Horizontal nav list with clean 24px gap */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a3b37;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-title {
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #7a6a63;
+  margin: 0 0 36px 0;
+}
+
+/* 3. Responsive 3-card Flexbox row */
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  width: 310px;
+  background-color: #ffffff;
+  border: 2px solid #f0e4d7;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(45, 36, 36, 0.06);
+}
+
+.cat-card img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.cat-card h2 {
+  margin: 16px 0 8px 0;
+}
+
+.cat-card p {
+  color: #5e504c;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+/* 4. Space-between pushes the two stats to opposite edges */
+.cat-stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff4eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #9c4221;
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260" role="img" aria-label="Barnaby the orange tabby cat">
+  <defs>
+    <linearGradient id="bgBarnaby" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF7E0"/>
+      <stop offset="100%" stop-color="#FFE8B3"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="260" rx="24" fill="url(#bgBarnaby)"/>
+  <ellipse cx="152" cy="224" rx="82" ry="14" fill="#E9CB8B"/>
+  <!-- Tail -->
+  <path d="M98 198 C62 192, 54 150, 76 132" fill="none" stroke="#F48C06" stroke-width="16" stroke-linecap="round"/>
+  <path d="M65 168 L77 166" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <path d="M66 150 L78 152" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <!-- Chonky Body -->
+  <ellipse cx="154" cy="176" rx="62" ry="48" fill="#FAA307" stroke="#4A2C11" stroke-width="4"/>
+  <ellipse cx="154" cy="184" rx="34" ry="34" fill="#FFF3D6"/>
+  <!-- Tabby stripes on body -->
+  <path d="M96 164 Q112 166 116 162" fill="none" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <path d="M95 180 Q112 182 118 178" fill="none" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <path d="M212 164 Q196 166 192 162" fill="none" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <path d="M213 180 Q196 182 190 178" fill="none" stroke="#C85A00" stroke-width="5" stroke-linecap="round"/>
+  <!-- Ears -->
+  <polygon points="100,96 92,42 138,68" fill="#FAA307" stroke="#4A2C11" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="107,86 102,54 128,70" fill="#FFC2B4"/>
+  <polygon points="208,96 216,42 170,68" fill="#FAA307" stroke="#4A2C11" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="201,86 206,54 180,70" fill="#FFC2B4"/>
+  <!-- Head -->
+  <ellipse cx="154" cy="108" rx="58" ry="47" fill="#FAA307" stroke="#4A2C11" stroke-width="4"/>
+  <!-- Forehead M / stripes -->
+  <path d="M142 66 L148 82 L154 72 L160 82 L166 66" fill="none" stroke="#C85A00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Happy curved eyes -->
+  <path d="M122 108 Q132 96 142 108" fill="none" stroke="#4A2C11" stroke-width="4" stroke-linecap="round"/>
+  <path d="M166 108 Q176 96 186 108" fill="none" stroke="#4A2C11" stroke-width="4" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="116" cy="118" rx="9" ry="5.5" fill="#FF8FA3" opacity="0.7"/>
+  <ellipse cx="192" cy="118" rx="9" ry="5.5" fill="#FF8FA3" opacity="0.7"/>
+  <!-- Muzzle & Open happy mouth -->
+  <ellipse cx="154" cy="122" rx="18" ry="13" fill="#FFF3D6"/>
+  <polygon points="149,114 159,114 154,120" fill="#E76F51"/>
+  <path d="M146 122 Q154 134 162 122 Z" fill="#E76F51" stroke="#4A2C11" stroke-width="2.5"/>
+  <!-- Whiskers -->
+  <line x1="82" y1="110" x2="108" y2="114" stroke="#4A2C11" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="122" x2="108" y2="122" stroke="#4A2C11" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="226" y1="110" x2="200" y2="114" stroke="#4A2C11" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="228" y1="122" x2="200" y2="122" stroke="#4A2C11" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Paws -->
+  <ellipse cx="132" cy="218" rx="16" ry="10" fill="#FFF3D6" stroke="#4A2C11" stroke-width="3.5"/>
+  <ellipse cx="176" cy="218" rx="16" ry="10" fill="#FFF3D6" stroke="#4A2C11" stroke-width="3.5"/>
+  <!-- Teal Yarn Ball -->
+  <circle cx="244" cy="204" r="24" fill="#2A9D8F" stroke="#1D3557" stroke-width="3.5"/>
+  <path d="M226 192 Q244 206 264 194" fill="none" stroke="#80ED99" stroke-width="2.5"/>
+  <path d="M224 208 Q246 218 266 206" fill="none" stroke="#80ED99" stroke-width="2.5"/>
+  <path d="M236 182 Q248 204 238 226" fill="none" stroke="#1D3557" stroke-width="2.5"/>
+  <path d="M222 220 Q198 232 184 224" fill="none" stroke="#2A9D8F" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

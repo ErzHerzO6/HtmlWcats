@@ -1,0 +1,90 @@
+/* =========================================================
+   TASK 6: HOVER EFFECTS & SMOOTH TRANSITIONS
+   Golden Rule: Put `transition` on the BASE selector (e.g. .cat-card),
+   NOT on `.cat-card:hover` — that way it animates smoothly both
+   when your mouse enters AND when your mouse leaves!
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #f8f5ff;
+  color: #231f2e;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #6b6280;
+  margin-bottom: 36px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* TODO 1: Add a smooth transition to .cat-card:
+   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+*/
+.cat-card {
+  width: 320px;
+  background-color: #ffffff;
+  border: 2px solid #e4dcfa;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(35, 31, 46, 0.06);
+}
+
+/* TODO 2: Create a `.cat-card:hover` rule!
+   When hovered, make the card lift up by 8px, deepen its shadow, and highlight its border:
+   - transform: translateY(-8px);
+   - box-shadow: 0 18px 36px rgba(35, 31, 46, 0.14);
+   - border-color: #9b72cf;
+*/
+
+
+/* Keeps the zoomed image clipped neatly inside rounded corners */
+.photo-frame {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* TODO 3: Add `transition: transform 0.3s ease;` to .cat-photo,
+   and create `.cat-card:hover .cat-photo` with `transform: scale(1.05);`
+   so the cat gently zooms in when you hover the card!
+*/
+.cat-photo {
+  width: 100%;
+  display: block;
+}
+
+
+/* TODO 4: Make `.pet-btn` smoothly react to `:hover` and `:active` (click)!
+   Step A: Add `transition: background-color 0.2s ease, transform 0.15s ease;` to `.pet-btn`
+   Step B: Create `.pet-btn:hover` and set `background-color: #5a3494;` and `transform: translateY(-2px);`
+   Step C: Create `.pet-btn:active` and set `transform: scale(0.96);` (feels like pressing a real button!)
+*/
+.pet-btn {
+  width: 100%;
+  padding: 13px 18px;
+  margin-top: 8px;
+  background-color: #7b4ec2;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}

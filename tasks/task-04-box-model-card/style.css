@@ -1,0 +1,88 @@
+/* =========================================================
+   TASK 4: THE CSS BOX MODEL
+   Analogy reminder:
+   - Content = The Cat
+   - Padding = Soft cushion INSIDE the box walls
+   - Border  = The cardboard box walls
+   - Margin  = Personal space OUTSIDE the box
+   ========================================================= */
+
+/* Best practice reset: makes width include padding & border automatically! */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #282a36;
+  margin: 0;
+}
+
+/* TODO 1: Style the .cat-card box!
+   - width: 350px;
+   - background-color: #ffffff;
+   - padding: 24px;                     (breathing room inside the card)
+   - border: 2px solid #d6e4f5;         (subtle border wall)
+   - border-radius: 24px;               (smooth rounded corners)
+   - margin: 48px auto;                 (48px top/bottom, "auto" centers it left/right!)
+   - box-shadow: 0 14px 30px rgba(40, 42, 54, 0.1);
+*/
+.cat-card {
+
+}
+
+/* TODO 2: Make the .cat-photo fit nicely inside the card!
+   - width: 100%;                       (fills the card's inner width)
+   - display: block;
+   - border-radius: 16px;
+   - margin-bottom: 16px;               (pushes the badge below it down a bit)
+*/
+.cat-photo {
+
+}
+
+/* TODO 3: Turn .badge into a cute pill-shaped tag!
+   - display: inline-block;
+   - background-color: #e3f6e8;
+   - color: #216e39;
+   - font-size: 13px;
+   - font-weight: bold;
+   - padding: 6px 12px;                 (6px top/bottom, 12px left/right)
+   - border-radius: 999px;              (999px creates a perfect pill shape!)
+*/
+.badge {
+
+}
+
+.cat-name {
+  margin: 12px 0 4px 0;
+  font-size: 26px;
+}
+
+.cat-role {
+  margin: 0 0 14px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.cat-bio {
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 20px 0;
+}
+
+/* TODO 4: Style the .adopt-btn button!
+   - width: 100%;
+   - padding: 14px 20px;
+   - background-color: #e63946;
+   - color: #ffffff;
+   - font-size: 16px;
+   - font-weight: bold;
+   - border: none;
+   - border-radius: 12px;
+   - cursor: pointer;
+*/
+.adopt-btn {
+
+}

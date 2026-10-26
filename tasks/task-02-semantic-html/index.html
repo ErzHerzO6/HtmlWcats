@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Paws Cat Shelter</title>
+</head>
+<body>
+
+  <!-- =========================================================
+       TASK 2: SEMANTIC HTML5 ("LABELING THE ROOMS")
+       Right now, everything below is wrapped in generic <div> tags!
+       It works in the browser, but it's messy ("div soup").
+
+       YOUR GOAL:
+       Replace the generic <div> tags with meaningful HTML5 tags:
+       1. <header>  for the top banner of the page
+       2. <nav>     for the navigation links inside the header
+       3. <main>    around the main body content of the page
+       4. <section> for each major topic area (keep the id="..." attributes!)
+       5. <article> for each standalone cat bio inside the residents section
+       6. <footer>  for the bottom copyright & address bar
+       ========================================================= -->
+
+  <!-- TODO 1: Change this outer <div> into a <header> -->
+  <div>
+    <h1>Sunny Paws Cat Shelter</h1>
+
+    <!-- TODO 2: Change this <div> into a <nav> -->
+    <div>
+      <a href="#about">About Us</a> |
+      <a href="#residents">Our Cats</a> |
+      <a href="#contact">Visit Us</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- TODO 3: Change this wrapper <div> into <main> -->
+  <div>
+
+    <!-- TODO 4: Change this <div> into a <section> (keep id="about"!) -->
+    <div id="about">
+      <h2>About Our Shelter</h2>
+      <p>
+        We rescue stray and sleepy kitties, give them cozy blankets, and match
+        them with loving forever homes.
+      </p>
+    </div>
+
+    <!-- TODO 5: Change this <div> into a <section> (keep id="residents"!) -->
+    <div id="residents">
+      <h2>Cats Looking for a Home</h2>
+
+      <!-- TODO 6: Change both cat <div> blocks below into <article> tags -->
+      <div>
+        <h3>Barnaby (Age: 3)</h3>
+        <img src="../../assets/barnaby.svg" alt="Barnaby the orange tabby cat" width="220">
+        <p>Loves chasing teal yarn balls and loudly announcing dinner time.</p>
+      </div>
+
+      <div>
+        <h3>Luna (Age: 2)</h3>
+        <img src="../../assets/luna.svg" alt="Luna the black cat" width="220">
+        <p>Quiet shadow ninja who purrs like a tiny motorboat when you read a book.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- TODO 7: Change this bottom <div> into a <footer> (keep id="contact"!) -->
+  <div id="contact">
+    <p>12 Whisker Lane, Catville &bull; Open Tue–Sun, 11:00–18:00</p>
+    <p>&copy; 2026 Sunny Paws Cat Shelter</p>
+  </div>
+
+  <!-- Floating Task Checklist -->
+  <script src="../../task-guide.js" data-task="2"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260" role="img" aria-label="Sir Whiskers the tuxedo cat">
+  <defs>
+    <linearGradient id="bgWhiskers" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF2FA"/>
+      <stop offset="100%" stop-color="#D6E4F5"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="260" rx="24" fill="url(#bgWhiskers)"/>
+  <ellipse cx="160" cy="224" rx="76" ry="14" fill="#BCCEE6"/>
+  <!-- Tail -->
+  <path d="M208 206 C250 202, 260 158, 240 138" fill="none" stroke="#282A36" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="240" cy="138" r="8" fill="#FFFFFF"/>
+  <!-- Body -->
+  <ellipse cx="160" cy="176" rx="54" ry="48" fill="#282A36" stroke="#191A22" stroke-width="4"/>
+  <!-- White tuxedo bib -->
+  <ellipse cx="160" cy="182" rx="30" ry="38" fill="#FFFFFF"/>
+  <!-- Ears -->
+  <polygon points="108,94 100,40 144,68" fill="#282A36" stroke="#191A22" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="114,84 109,52 135,70" fill="#F4ACB7"/>
+  <polygon points="212,94 220,40 176,68" fill="#282A36" stroke="#191A22" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="206,84 211,52 185,70" fill="#F4ACB7"/>
+  <!-- Head -->
+  <ellipse cx="160" cy="108" rx="56" ry="47" fill="#282A36" stroke="#191A22" stroke-width="4"/>
+  <!-- White muzzle blaze -->
+  <path d="M160 98 L130 134 Q160 154 190 134 Z" fill="#FFFFFF"/>
+  <!-- Eyes -->
+  <circle cx="138" cy="104" r="9" fill="#90BE6D"/>
+  <circle cx="182" cy="104" r="9" fill="#90BE6D"/>
+  <circle cx="138" cy="104" r="4.5" fill="#191A22"/>
+  <circle cx="182" cy="104" r="4.5" fill="#191A22"/>
+  <circle cx="135" cy="101" r="2.5" fill="#FFFFFF"/>
+  <circle cx="179" cy="101" r="2.5" fill="#FFFFFF"/>
+  <!-- Monocle on right eye -->
+  <circle cx="182" cy="104" r="14" fill="none" stroke="#F4C430" stroke-width="2.5"/>
+  <path d="M196 108 Q204 128 198 148" fill="none" stroke="#F4C430" stroke-width="2"/>
+  <!-- Nose & Dapper Mustache -->
+  <polygon points="155,116 165,116 160,122" fill="#F4ACB7"/>
+  <path d="M160 124 C150 120, 142 128, 136 124" fill="none" stroke="#282A36" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M160 124 C170 120, 178 128, 184 124" fill="none" stroke="#282A36" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="86" y1="110" x2="118" y2="114" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="84" y1="122" x2="118" y2="122" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="234" y1="110" x2="202" y2="114" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="236" y1="122" x2="202" y2="122" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Red Bowtie -->
+  <polygon points="160,152 138,140 138,164" fill="#E63946" stroke="#191A22" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="160,152 182,140 182,164" fill="#E63946" stroke="#191A22" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="160" cy="152" r="6" fill="#C1121F" stroke="#191A22" stroke-width="2.5"/>
+  <!-- White socks/paws -->
+  <ellipse cx="138" cy="218" rx="16" ry="10" fill="#FFFFFF" stroke="#191A22" stroke-width="3.5"/>
+  <ellipse cx="182" cy="218" rx="16" ry="10" fill="#FFFFFF" stroke="#191A22" stroke-width="3.5"/>
+</svg>

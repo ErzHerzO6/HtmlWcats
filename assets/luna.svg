@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260" role="img" aria-label="Luna the black cat">
+  <defs>
+    <linearGradient id="bgLuna" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F1EBFF"/>
+      <stop offset="100%" stop-color="#DDD0FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="260" rx="24" fill="url(#bgLuna)"/>
+  <ellipse cx="160" cy="224" rx="72" ry="13" fill="#C5B3F0"/>
+  <!-- Stars -->
+  <circle cx="56" cy="60" r="4" fill="#9B72CF"/>
+  <circle cx="266" cy="84" r="3.5" fill="#9B72CF"/>
+  <path d="M248 42 L251 50 L259 53 L251 56 L248 64 L245 56 L237 53 L245 50 Z" fill="#F4C430"/>
+  <path d="M72 92 L74 98 L80 100 L74 102 L72 108 L70 102 L64 100 L70 98 Z" fill="#F4C430"/>
+  <!-- Tail -->
+  <path d="M204 208 C248 208, 256 150, 232 128 C218 116, 208 132, 218 144" fill="none" stroke="#231F2E" stroke-width="14" stroke-linecap="round"/>
+  <!-- Body -->
+  <ellipse cx="160" cy="176" rx="50" ry="47" fill="#231F2E"/>
+  <!-- Ears -->
+  <polygon points="110,94 98,36 146,68" fill="#231F2E" stroke-linejoin="round"/>
+  <polygon points="116,84 109,50 137,69" fill="#B892FF"/>
+  <polygon points="210,94 222,36 174,68" fill="#231F2E" stroke-linejoin="round"/>
+  <polygon points="204,84 211,50 183,69" fill="#B892FF"/>
+  <!-- Head -->
+  <ellipse cx="160" cy="108" rx="54" ry="46" fill="#231F2E"/>
+  <!-- Big golden eyes -->
+  <ellipse cx="137" cy="106" rx="12" ry="13" fill="#FFD166"/>
+  <ellipse cx="183" cy="106" rx="12" ry="13" fill="#FFD166"/>
+  <ellipse cx="137" cy="106" rx="5" ry="9" fill="#14111B"/>
+  <ellipse cx="183" cy="106" rx="5" ry="9" fill="#14111B"/>
+  <circle cx="133" cy="101" r="3.5" fill="#FFFFFF"/>
+  <circle cx="179" cy="101" r="3.5" fill="#FFFFFF"/>
+  <!-- Little pink nose -->
+  <polygon points="156,118 164,118 160,123" fill="#FF99C8"/>
+  <path d="M160 123 Q154 129 149 125" fill="none" stroke="#8E7DBE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M160 123 Q166 129 171 125" fill="none" stroke="#8E7DBE" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Collar with crescent moon -->
+  <path d="M122 146 Q160 158 198 146" fill="none" stroke="#9B72CF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M164 156 A8 8 0 1 1 154 166 A6 6 0 1 0 164 156 Z" fill="#FFD166"/>
+  <!-- Paws -->
+  <ellipse cx="140" cy="218" rx="14" ry="9" fill="#322C42"/>
+  <ellipse cx="180" cy="218" rx="14" ry="9" fill="#322C42"/>
+</svg>
